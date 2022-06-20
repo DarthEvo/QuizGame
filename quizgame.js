@@ -1,5 +1,5 @@
 const prompt = require("prompt-sync")();
-const score = 15;
+let score = 15;
 
 while (score > 0 && score < 30) {
   const firstQuestion = prompt("What's the capital of Sweden?");
