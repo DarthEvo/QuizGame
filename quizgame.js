@@ -1,48 +1,48 @@
-
-var score = 15;
+const prompt = require("prompt-sync")();
+const score = 15;
 
 while (score > 0 && score < 30) {
-    var firstQuestion = prompt("What's the capital of Sweden?");
-    if (firstQuestion == "Stockholm") {
-        score = score + 5;
-        confirm("You are right!");
-        console.log("Your score is: " + score);
-    } else {
-        score = score - 5;
-        confirm("You are wrong");
-        console.log("Your score is: " + score);
-    }
-
-    var secondQuestion = prompt("What's the capital of Thailand?");
-    if (secondQuestion == "Bangkok") {
-        score = score + 5;
-        confirm("You are right!");
-        console.log("Your score is: " + score);
-    } else {
-        score = score - 5;
-        confirm("You are wrong");
-        console.log("Your score is: " + score);
-    }
-
-var thirdQuestion = prompt("What is the capital of France?");
-if (thirdQuestion == "Paris") {
+  const firstQuestion = prompt("What's the capital of Sweden?");
+  if (firstQuestion == "Stockholm") {
     score = score + 5;
-    confirm("You are right!");
+    console.log("You are right!");
     console.log("Your score is: " + score);
-} else {
+  } else {
     score = score - 5;
-    confirm("You are wrong");
+    console.log("You are wrong");
     console.log("Your score is: " + score);
-}
-switch (score) {
+  }
+
+  const secondQuestion = prompt("What's the capital of Thailand?");
+  if (secondQuestion == "Bangkok") {
+    score = score + 5;
+    console.log("You are right!");
+    console.log("Your score is: " + score);
+  } else {
+    score = score - 5;
+    console.log("You are wrong");
+    console.log("Your score is: " + score);
+  }
+
+  const thirdQuestion = prompt("What is the capital of France?");
+  if (thirdQuestion == "Paris") {
+    score = score + 5;
+    console.log("You are right!");
+    console.log("Your score is: " + score);
+  } else {
+    score = score - 5;
+    console.log("You are wrong");
+    console.log("Your score is: " + score);
+  }
+  switch (score) {
     case 0:
-        alert("You lose!");
-        break;
+      console.log("You lose!");
+      break;
     case 30:
-        alert("You win!");
-        break;
+      console.log("You win!");
+      break;
     default:
-        alert("Something went wrong!");
-        break;
-}
+      console.log("Something went wrong!");
+      break;
+  }
 }
